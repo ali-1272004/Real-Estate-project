@@ -1,0 +1,741 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real Estate</title>
+        <!-- bootstrap && css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/all.css"> 
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=My+Soul&display=swap" rel="stylesheet">
+        <!-- mooli font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+        <!-- nunito -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- playfair -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <!-- patrick -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- start header -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top rounded-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand me-4 text-light my-auto d-flex align-items-center" href="#">
+                    <img src="https://i.pinimg.com/736x/1a/96/1d/1a961da3c9104e940db72418a596a2ee.jpg" alt="" class="rounded-circle">
+                    Real Estate
+                </a>
+                <div class="vr my-auto d-none d-lg-block " style="height:45px; width: 2px ; background-color: #c2d6f1;"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2  mb-lg-0 ms-2">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Rent</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               <span>F</span>ind
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-light" href="#">Agents</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Developers</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Brokerages</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-light" href="#">More...</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#" tabindex="-1" aria-disabled="true">Recources</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex my-auto">
+                        <input class="form-control me-2" type="search" placeholder="Area" aria-label="Search">
+                        <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Login
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- start Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-3" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="enter your email address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="enter your password">
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Remmember Me</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary me-auto login">Login</button>
+                        <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+
+        <!-- start carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active me-3" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2 " class="me-3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3 " class="me-3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3 " class="me-3"></button>
+                </div>  
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/167919/Leavesel-attal-holding_brochur_leaves__2023-06-15.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Discover Modern Living</h5>
+                        <p>Spacious apartments,and community-driven design.</p>
+                        <button type="button" class="btn btn-primary">View Units</button>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/167923/Leaves4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Luxury Affordability</h5>
+                        <p>Choose units tailored to your lifestyle and budget.</p>
+                        <button type="button" class="btn btn-primary">Explore Units</button>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/374416/2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>From Cairo to the Coast</h5>
+                        <p>seek to city energy or tranquility, find your ideal home today</p>
+                        <button type="button" class="btn btn-primary">Browse Region</button>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/309708/Chalets1__2_.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Built on Trust</h5>
+                        <p>Proudly helping families and investors find their perfect property</p>
+                        <button type="button" class="btn btn-primary">Meet Agents</button>
+                    </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                 <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook fs-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram fs-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-whatsapp fs-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-twitter fs-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin fs-2"></i></a>
+                </div>
+            </div>              
+            <!-- end carousel -->  
+        </header>
+        <!-- end header -->
+
+        <!-- start main -->
+        <main>
+            <!-- start gateway section -->
+            <section class="gateway">    
+                <div class="card w-100 mt-1" style="height: 18rem">
+                    <div class="gateway_overlay">
+                        <div class="card-body mt-3 h-100">
+                            <h2 class="card-title "><i class="fa-solid fa-star"></i>  Your Gateway to Egyptian Real Estate</h2>
+                            <p class="card-text mt-5 ms-3">From stylish apartments in Cairo to peaceful villas by the coast, we offer a curated portfolio of properties that blend architectural quality, great locations, and honest pricing — all designed to meet your lifestyle and investment goals.</p>
+                            <a href="#" class="btn btn-primary w-auto mt-3">View Listings</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end gateway section -->
+
+            <div class="separator"></div>
+
+            <!-- start explore section -->
+            <section class="explore">
+                    <h2 class="header w-100 rounded-2 text-center">Explore Real Estate Hotspots</h2>
+                    <div class="accordion accordion-flush rounded-2 overflow-hidden" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    New Cairo
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Modern city living with all the amenities. Ideal for families and professionals seeking secure gated communities, schools, and shopping centers.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    North Coast
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Beachfront lifestyle with investment growth. From summer homes to year-round residences, the North Coast blends luxury with relaxed coastal vibes.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    October City
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Suburban peace near the capital. Affordable villas and growing infrastructure make October City a smart buy for homeowners and developers.</div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- end explore section -->
+            <div class="separator"></div>
+            <!-- start discripe section -->
+            <section class="discripe">
+               <h2 class="discripe_header text-center rounded-2">Find You Home</h2> 
+               <div class="discripe_contnet rounded-2">
+                    <h4><i class="fa-solid fa-pen-to-square text-light"></i> Describe Your Ideal Home :</h4>
+                    <!-- Button trigger modal -->
+                    <div class="popover-wrapper">
+                    <button type="button" class="btn btn-primary discripe_button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      Submit Request
+                    </button>
+                     <div class="popover-box">Click to submit your<br>home description</div>
+                    </div>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Request Submition</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Request submitted successfully! Our team will review your description and get back to you with suitable options shortly.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea class="d-block mt-4 rounded-2 w-100"cols="60" rows="5" placeholder="Type here what you’re looking for — location, size, type, budget, and any special features."></textarea>          
+               </div>
+            </section>
+            <!-- end discripe section -->
+
+            <div class="separator"></div>
+
+            <!-- start valuation section -->
+            <section class="valuation">
+            <h2 class="valuation_header text-center rounded-2">Estimate Your Property</h2> 
+            <div class="valuation_content rounded-2">
+                    <h4><i class="fa-solid fa-chart-line text-light"></i> Tell Us About Your Property:</h4>
+                    
+                    <!-- Button trigger modal -->
+                    <div class="popover-wrapper">
+                        <button type="button" class="btn btn-success valuation_button" data-bs-toggle="modal" data-bs-target="#valuationModal">
+                            Get Free Estimate
+                        </button>
+                        <div class="popover-box">Click to estimate your<br>proberty's value</div>
+                    </div>
+                    
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="valuationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="valuationModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="valuationModalLabel">Valuation Submitted</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Thank you! Your property details have been submitted. Our team will review and send you a personalized market estimate.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Got it</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Textarea -->
+                    <textarea class="d-block mt-4 rounded-2 w-100" cols="60" rows="5" placeholder="Type basic info about your property — location, size (m²), number of rooms, upgrades, or features..."></textarea>          
+            </div>
+            </section>
+            <!-- end valuation section -->
+
+            <div class="separator"></div>
+           <!-- start neighborhood section -->
+            <section class="neighborhood">
+            <h2 class="neighborhood_header text-center rounded-2">Help Us Match You With the Right Neighborhood</h2> 
+            <div class="neighborhood_content rounded-2">
+                    <h4><i class="fa-solid fa-map-location-dot text-light"></i> What kind of area are you interested in?</h4>
+                    
+                    <!-- Button trigger modal -->
+                    <div class="popover-wrapper">
+                        <button type="button" class="btn btn-warning neighborhood_button" data-bs-toggle="modal" data-bs-target="#neighborhoodModal">
+                            Suggest Neighborhoods
+                        </button>
+                        <div class="popover-box">Click to you with<br>the right neighborhood</div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="neighborhoodModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="neighborhoodModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="neighborhoodModalLabel">Neighborhood Request Received</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Thanks! Your preferences have been submitted. We’ll recommend neighborhoods that fit your lifestyle and priorities shortly.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Got it</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Textarea -->
+                    <textarea class="d-block mt-4 rounded-2 w-100" cols="60" rows="5" placeholder="E.g. I want a peaceful area near parks and schools, preferably in October City or Sheikh Zayed..."></textarea>          
+            </div>
+            </section>
+            <!-- end neighborhood section -->
+
+            <div class="separator"></div>
+
+            <!-- start img section -->
+             <section class="img rounded-2">
+                <div class="img_overlay rounded-2"></div>
+             </section>
+            <!-- end img section -->
+
+            <!-- start estates section -->
+             <section class="estates mb-5">
+                <h2 class="estates_header text-center mt-2 rounded-2">Top Cities to Live in Egypt</h2>
+                <div class="container mt-5">
+                    <div class="row g-5">
+                        <div class="col-md-6 col-lg-4 col-sm-12 effect">
+                            <div class="card m-auto w-100 h-100">
+                                <img src="https://prod-images.nawy.com/processed/property_image/image/422178/high.webp" class="card-img-top" data-nimg="fill" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">Villa-Il Monte Galala</h5>
+                                        <p class="card-text position-relative z-2 ">Enjoy elevated coastal living with spacious breathtaking views.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-12">
+                            <div class="card m-auto w-100 h-100">
+                                <img src="https://prod-images.nawy.com/processed/property_image/image/236805/high.webp" class="card-img-top" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">Roots-Beit Al Bahr</h5>
+                                        <p class="card-text position-relative z-2">A graceful blend of heritage charm seaside comfort on the Red Sea.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-12">
+                        <div class="card m-auto w-100 h-100">
+                                <img src="https://prod-images.nawy.com/processed/property_image/image/395136/high.webp" class="card-img-top" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">Villa-Il Monte Galala</h5>
+                                        <p class="card-text position-relative z-2">Smart, family-friendly design set in a vibrant coastal community.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-12">
+                             <div class="card m-auto w-100 h-100">
+                                <img src="https://prod-images.cooingestate.com/processed/property_image/image/420650/high.webp" class="card-img-top" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">Chalet-Marina</h5>
+                                        <p class="card-text position-relative z-2">Relax in a beachside retreat with modern finishes and resort vibes.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-12">
+                             <div class="card m-auto w-100 h-100">
+                                <img src="https://prod-images.cooingestate.com/processed/property_image/image/346584/high.webp" class="card-img-top" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">Capin-Hacienda West</h5>
+                                        <p class="card-text position-relative z-2">North Coast luxury with stylish architecture and natural landscapes.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-12">
+                             <div class="card m-auto w-100 h-100">
+                                <img src="https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/236795/Screenshot_5.png" class="card-img-top" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">Serviced Apartmente</h5>
+                                        <p class="card-text position-relative z-2">Fully equipped living with hotel-grade comfort and surroundings.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-12">
+                             <div class="card m-auto w-sm-100 h-100">
+                                <img src="https://s3.eu-central-1.amazonaws.com/prod.images.cooingestate.com/admin/property_image/image/430479/Screenshot_2025-06-11_134902.png" class="card-img-top" data-nimg="fill" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">chalet-Helltop</h5>
+                                        <p class="card-text position-relative z-2">Tropical views and modern design — perfect for calm, stylish living.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-12">
+                            <div class="card m-auto w-100 h-100">
+                                <img src="https://prod-images.nawy.com/processed/property_image/image/154007/high.webp" class="card-img-top" data-nimg="fill" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title position-relative z-2">Villa-Il Monte Galala</h5>
+                                        <p class="card-text position-relative z-2">Enjoy elevated coastal living with spacious breathtaking views.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                             <div class="card m-auto w-sm-100 h-100">
+                                <img src="./images/estates1.jpg" class="card-img-top" data-nimg="fill" alt="..." height="190">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="card_content align-self-start">
+                                        <h5 class="card-title align-self-start position-relative z-2">Chalet-Telal Sokhna</h5>
+                                        <p class="card-text align-self-start position-relative z-2">Spacious and serene, set in nature with sweeping coastal views.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary align-self-start position-relative z-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+            <!-- end estates section -->
+
+            <!-- start img2 section -->
+             <section class="img2 rounded-2">
+                <div class="img2_overlay rounded-2"></div>
+             </section>
+            <!-- end img2 section -->
+
+            <div class="separator"></div>
+
+            <!-- start team section -->
+             <section class="team mb-5">
+                <h2 class="team_header text-center mt-2 rounded-2">Our Creative Leaders</h2>
+                <div class="container mt-5">
+                    <div class="row g-5">
+                    
+                    <!-- Card 1 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card h-100 m-auto w-100 rounded-4">
+                        <div class="card-body rounded-4">
+                            <div class="card_header">
+                                <h5 class="card-title">All Thanks And Appreciation</h5>
+                                <h6 class="card-subtitle mb-2 text-light"><i class="fa-regular fa-clock"></i> july 12,2004</h6>
+                            </div>
+                            <div class="card_footer d-flex flex-column justify-content-end">
+                                <img src="images/girl1.jpeg" class="img-thumbnail" alt="..." width="125" height="125">
+                                <p><strong>Lena Morgan</strong></p>
+                                <p><small>Property Consultant</small></p>
+                            </div>   
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card card_2 h-100 m-auto w-100 rounded-4">
+                        <div class="card-body rounded-4">
+                            <h5 class="card-title">All Thanks And Appreciation</h5>
+                            <h6 class="card-subtitle mb-2 text-light"><i class="fa-regular fa-clock"></i> july 12,2004</h6>
+                            <div class="card_footer d-flex flex-column justify-content-end">
+                               <img src="images/team6.jpeg" class="img-thumbnail" alt="..." width="125" height="125" style="border-radius: 50%;">
+                                <p><strong>Eli Carter</strong></p>
+                                <p><small>Community Strategist</small></p>
+                            </div>   
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card card_3 h-100 m-auto w-100 rounded-4">
+                        <div class="card-body rounded-4">
+                            <h5 class="card-title">All Thanks And Appreciation</h5>
+                            <h6 class="card-subtitle mb-2 text-light"><i class="fa-regular fa-clock"></i> july 12,2004</h6>
+                            <div class="card_footer d-flex flex-column justify-content-end">
+                                <img src="images/team2.jpeg" class="img-thumbnail" alt="..." width="125" height="125">
+                                <p><strong>Nora Blake</strong></p>
+                                <p><small>Digital Experience Lead</small></p>
+                            </div>   
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end team section -->
+
+            <div class="separator"></div>
+
+            <!-- start podcast section -->
+             <section class="podcast">
+                <h2 class="podcast_header text-center mt-2 rounded-2 mb-5">Egypt Real Estate Podcasts</h2>
+                <!-- card1 -->
+                <div class="card mb-4 shadow rounded-4">
+                    <div class="row g-0 flex-column flex-md-row-reverse">
+                        
+                        <!-- Image Section -->
+                        <div class="card-img1 col-md-4">
+                            <img src="https://prod-images.cooingestate.com/processed/property_image/image/346584/high.webp" class="img-fluid rounded-top rounded-md-end object-fit-cover h-100" alt="Podcast Cover">
+                        </div>
+
+                        <!-- Text Section -->
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Coastal Investment Outlook</h5>
+                                <h6 class="text-muted mb-1 ">Mon, May 25th 2020</h6>
+                                <span></span>
+                                <p class="card-text justify-content-end mb-5 mt-4">Discover why master-planned coastal communities like Sokhna and El Alamein are reshaping Egypt’s <br> housing appeal. This episode covers buyer demand, resort-style development, and tourism-linked real estate growth.</p>
+                                <div class="buttons d-flex gap-2 mt-3">
+                                    <button class="btn btn-primary btn-sm align-items-center"><i class="fa-solid fa-play"></i> Play Episode</button>
+                                    <button class="btn btn-outline-secondary btn-sm align-items-center"><i class="fa-solid fa-clock"></i> 55 mins</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card card2 mb-4 shadow rounded-4">
+                    <div class="row g-0 flex-column flex-md-row">
+                        
+                        <!-- Image Section -->
+                        <div class="card-img2 col-md-4">
+                        <img src="images/image2.jpg" class="img-fluid rounded-top rounded-md-end object-fit-cover h-100" alt="Podcast Cover">
+                        </div>
+
+                        <!-- Text Section -->
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Luxury by Design</h5>
+                                <h6 class="text-muted mb-1">Mon, May 25th 2020</h6>
+                                <span></span>
+                                <p class="card-text justify-content-end mb-5 mt-4">We spotlight high-end lifestyle properties built over water and why they’re capturing premium buyers. From architectural <br> beauty to vacation rental returns — this episode bridges luxury with smart investment.</p>
+                                <div class="buttons d-flex gap-2 mt-3">
+                                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i> Play Episode</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="fa-solid fa-clock"></i> 55 mins</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card3 -->
+                <div class="card mb-4 shadow rounded-4">
+                    <div class="row g-0 flex-column flex-md-row-reverse">
+                        
+                        <!-- Image Section -->
+                        <div class="card-img1 col-md-4">
+                        <img src="images/wallpaper3.jpg" class="img-fluid rounded-top rounded-md-end object-fit-cover h-100" alt="Podcast Cover">
+                        </div>
+
+                        <!-- Text Section -->
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Resort Living Redefined</h5>
+                                <h6 class="text-muted mb-1">Mon, May 25th 2020</h6>
+                                <span></span>
+                                <p class="card-text justify-content-end mb-5 mt-4">This episode explores resort-style developments along Egypt’s Red Sea coast. We dive into the appeal <br>of integrated communities, lifestyle amenities, and why these zones are attracting both local and international buyers.</p>
+                                <div class="buttons d-flex gap-2 mt-3">
+                                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i> Play Episode</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="fa-solid fa-clock"></i> 55 mins</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card4 -->
+                <div class="card card2 mb-4 shadow rounded-4">
+                    <div class="row g-0 flex-column flex-md-row">
+                        
+                        <!-- Image Section -->
+                        <div class="card-img2 col-md-4">
+                        <img src="images/wallpaper4.jpg" class="img-fluid rounded-top rounded-md-end object-fit-cover h-100" alt="Podcast Cover">
+                        </div>
+
+                        <!-- Text Section -->
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Elevated Urban Luxury</h5>
+                                <h6 class="text-muted mb-1">Mon, May 25th 2020</h6>
+                                <span></span>
+                                <p class="card-text justify-content-end mb-5 mt-4">From vertical living to innovative zoning, Egypt’s waterfront cities are becoming hubs of modern luxury. This episode unpacks <br>urban planning, smart infrastructure, and the balance between density and comfort in property development.</p>
+                                <div class="d-flex gap-2 mt-3">
+                                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i> Play Episode</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="fa-solid fa-clock"></i> 55 mins</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end podcast section -->
+
+            <!-- start join section -->
+            <section class="join mt-5">
+                <h2 class="join_header text-center mb-4">Join Us</h2>
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+                            <div class="card m-auto" style="width: 17rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-3">Subscribe Now</h5>
+                                    <div class="text-center card_img m-auto pt-4">
+                                        <i class="fa-brands fa-youtube text-light fs-2"></i>
+                                    </div>
+                                    <a href="#" class="card-link text-decoration-none text-light fs-5 d-block mt-3">Go to link</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card m-auto" style="width: 17rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-3">Follow</h5>
+                                    <div class="text-center card_img m-auto">
+                                        <img src="https://i.pinimg.com/736x/67/30/db/6730dbad1bfd0276959528cf9cc09739.jpg" class="rounded" alt="..." width="80" height="80">
+                                    </div>
+                                    <a href="#" class="card-link text-decoration-none text-light fs-5 d-block mt-3">Go to link</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card m-auto" style="width: 17rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-3">Like the page</h5>
+                                    <div class="text-center card_img m-auto pt-4">
+                                        <i class="fa-brands fa-linkedin-in text-light fs-2"></i>
+                                    </div>
+                                    <a href="#" class="card-link text-decoration-none text-light fs-5 d-block mt-3">Go to link</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card m-auto" style="width: 17rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-3">Watch Videos</h5>
+                                    <div class="text-center card_img m-auto pt-4">
+                                        <i class="fa-brands fa-tiktok text-light fs-2"></i>
+                                    </div>
+                                    <a href="#" class="card-link text-decoration-none text-light fs-5 d-block mt-3 w-auto">Go to link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end join section -->
+        </main>
+        <!-- end main -->
+
+        <!-- start footer -->
+        <footer class="">
+            <div class="container-fluid">
+                <div class="row g-5">
+                    <!-- link1 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="footer_header d-flex justify-content-center align-items-center">
+                            <img src="https://i.pinimg.com/736x/1a/96/1d/1a961da3c9104e940db72418a596a2ee.jpg" alt="" class="" width="100" height="100">
+                            <h4 class="">Get in Touch</h4>
+                        </div>
+                        <p class="text-center mt-4"><i class="fa-solid fa-phone"></i> Phone: +20 100 000 000</p>
+                        <p class="text-center"><i class="fa-solid fa-envelope"></i> Email: info@egyptpropertyhub.com</p>
+                        <p class="text-center"><i class="fa-solid fa-location-dot"></i> Address: 5th Settlement, Cairo</p>
+                    </div>
+                    <!-- link2 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="footer_header d-flex justify-content-center align-items-center">
+                            <img src="https://i.pinimg.com/736x/1a/96/1d/1a961da3c9104e940db72418a596a2ee.jpg" alt="" class="" width="100" height="100">
+                            <h4 class="">Explore</h4>
+                        </div>
+                        <p class="text-center mt-4"><i class="fa-solid fa-house-user"></i> Buy Property</p>
+                        <p class="text-center"><i class="fa-solid fa-building"></i> Rent Apartments</p>
+                        <p class="text-center"><i class="fa-solid fa-magnifying-glass"></i> Find Your Home</p>
+                    </div>
+                    <!-- link3 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="footer_header d-flex justify-content-center align-items-center">
+                            <img src="https://i.pinimg.com/736x/1a/96/1d/1a961da3c9104e940db72418a596a2ee.jpg" alt="" class="" width="100" height="100">
+                            <h4 class="">Our Mission</h4>
+                        </div>
+                        <p class="text-center mt-4"><i class="fa-solid fa-phone"></i> Empowering smart real estate decisions</p>
+                        <p class="text-center"><i class="fa-solid fa-envelope"></i> Connecting buyers to trusted developers</p>
+                        <p class="text-center"><i class="fa-solid fa-location-dot"></i> Helping families find their dream home</p>
+                    </div>
+                </div>
+                <!-- Copyright -->
+                <div class="copy text-center mt-4 text-secondary small">
+                    <p>COPYRIGHT &copy; 2025 EGYPT PROPERTY HUB. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="empty"></div>
+            </div>
+        </footer>
+        <!-- end footer -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
